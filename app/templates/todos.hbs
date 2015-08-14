@@ -2,11 +2,9 @@
 
 <section id="main">
     <ul id="todo-list">
-        <ul id="todo-list">
-            {{#each todo in model}}
-                {{todo-item todo=todo}}
-            {{/each}}
-        </ul>
+        {{#each todo in model}}
+            {{todo-item action="acceptChanges" todo=todo}}
+        {{/each}}
     </ul>
 
     {{input type="text" id="new-todo" placeholder="What needs to be done?" value=newTitle action="createTodo"}}
