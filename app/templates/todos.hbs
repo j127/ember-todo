@@ -1,16 +1,10 @@
-<input type="text" id="new-todo" placeholder="What needs to be done?" />
+{{input type="text" id="new-todo" placeholder="What needs to be done?" value=newTitle action="createTodo"}}
 
 <section id="main">
-    <ul id="todo-list">
-        {{#each todo in model}}
-            {{todo-item action="acceptChanges" deleteTodo="deleteTodo" todo=todo}}
-        {{/each}}
-    </ul>
+    {{outlet}}
 
-    {{input type="text" id="new-todo" placeholder="What needs to be done?" value=newTitle action="createTodo"}}
+    <input type="checkbox" id="toggle-all">
 </section>
-
-{{outlet}}
 
 <footer id="footer">
     <span id="todo-count">
