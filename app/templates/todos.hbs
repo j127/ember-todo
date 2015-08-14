@@ -12,16 +12,15 @@
     </span>
     <ul id="filters">
         <li>
-            <a href="all" class="selected">All</a>
+            {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
         </li>
         <li>
-            <a href="active">Active</a>
+            {{#link-to "todos.active" activeClass="selected"}}Active{{/link-to}}
         </li>
         <li>
-            <a href="completed">Completed</a>
+            {{#link-to "todos.complete" activeClass="selected"}}Complete{{/link-to}}
         </li>
     </ul>
-
     <button id="clear-completed">
         Clear completed (1)
     </button>
