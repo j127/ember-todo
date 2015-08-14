@@ -3,7 +3,7 @@
 <section id="main">
     <ul id="todo-list">
         {{#each todo in model}}
-            {{todo-item action="acceptChanges" todo=todo}}
+            {{todo-item action="acceptChanges" deleteTodo="deleteTodo" todo=todo}}
         {{/each}}
     </ul>
 
